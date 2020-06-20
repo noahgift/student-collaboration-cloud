@@ -13,11 +13,15 @@ Google Cloud Shell (recommend you create a free tier account)
 
 Azure Cloud Shell
 
+Examples:
 
 * Setup this type of repository structure
 
 https://github.com/noahgift/github-actions-pytest
 
+* Lambda worflow
+
+https://github.com/noahgift/awslambda
 
 
 # Assignment 1
