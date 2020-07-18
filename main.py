@@ -15,7 +15,10 @@ def info(title):
     print('process id:', os.getpid())
 
 def f():
+    ## This could accept additiona commands vs f(algorithm), etc
     sys.stdout = open(str(os.getpid()) + ".out", "w")
+    ## You could write this out to Google Cloud Storage 
+    ## Be aware that Google App Engine file system is read only
     info('function f')
     sokoban.main()
 
@@ -29,7 +32,10 @@ def easy_sokoban():
     p = Process(target=f)
     p.start()
     p.join()
+    ### Read from Google Cloud Storage?
     return "Stuff"
+
+
 @app.route('/newroute/<name>')
 def newroute(name):
     """parameter"""
