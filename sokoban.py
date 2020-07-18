@@ -489,19 +489,18 @@ def solve_map(file, level, algorithm, dead, simulate):
     if simulate:
         animate_sokoban_solution(map, seq)
 
-
 def main():
     parser = argparse.ArgumentParser(description="Solve Sokoban map")
-    parser.add_argument("level", help="Level name or 'all'")
-    parser.add_argument("algorithm", help="ucs | [f][a[2]] | all")
+    #parser.add_argument("level", help="Level name or 'all'",default = 1,action="store_true")
+    #parser.add_argument("algorithm", help="ucs | [f][a[2]] | all",default = "ucs",action="store_true")
     parser.add_argument("-d", "--dead", help="Turn on dead state detection (default off)", action="store_true")
     parser.add_argument("-s", "--simulate", help="Simulate the solution (default off)", action="store_true")
     parser.add_argument("-f", "--file", help="File name storing the levels (levels.txt default)", default='levels.txt')
     parser.add_argument("-t", "--timeout", help="Seconds to allow (default 300)", type=int, default=300)
 
     args = parser.parse_args()
-    level = args.level
-    algorithm = args.algorithm
+    level = "1" #args.level
+    algorithm = "ucs" #args.algorithm
     dead = args.dead
     simulate = args.simulate
     file = args.file
@@ -539,7 +538,6 @@ def main():
             solve_with_timeout(maxSeconds)
     else:
         solve_with_timeout(maxSeconds)
-
 
 if __name__ == '__main__':
     main()
