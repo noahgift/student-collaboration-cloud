@@ -8,4 +8,4 @@ if __name__ == '__main__':
     p = Process(target=f)
     p.start()
     p.join()
-
+    print(p)
