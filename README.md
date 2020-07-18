@@ -23,7 +23,11 @@ https://github.com/noahgift/github-actions-pytest
 
 https://github.com/noahgift/awslambda
 
+## To run
 
+```bash
+python3 sokoban.py -d 1 ucs
+```
 # Assignment 1
 
 * YouTube Screencast
